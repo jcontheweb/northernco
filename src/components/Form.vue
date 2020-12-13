@@ -49,9 +49,11 @@ export default {
       if (this.validate()) {
         try {
           this.loading = true;
-          await axios.post("http://localhost:3002/api/form");
-          this.loading = false;
-          this.$emit('submitted')
+          // await axios.post("http://localhost:3002/api/form");
+          setTimeout(() => {
+            this.loading = false;
+            this.$emit("submitted");
+          }, 2000);
         } catch (e) {
           console.error(e);
           this.loading = false;
