@@ -1,17 +1,9 @@
-const express = require("express");
-const app = express();
-const cors = require("cors");
-var path = require("path");
-var bodyParser = require("body-parser");
-
-app.use(cors());
-
-app.post("/api/form", (req, res) => {
-  res.setTimeout(3000, () => {
-    res.sendStatus(200);
-  });
-});
-
-const port = 3002;
-
-app.listen(process.env.PORT || port);
+// server.js
+var express = require('express');
+var path = require('path');
+var serveStatic = require('serve-static');
+app = express();
+app.use(serveStatic(__dirname + "/dist"));
+var port = process.env.PORT || 5000;
+app.listen(port);
+console.log('server started '+ port);
