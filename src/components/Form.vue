@@ -24,7 +24,7 @@
 <script>
 import FormInput from "@/components/FormInput";
 import FormSelect from "@/components/FormSelect";
-import axios from "axios";
+// import axios from "axios";
 export default {
   components: {
     FormInput,
