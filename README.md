@@ -10,11 +10,6 @@ yarn
 yarn serve
 ```
 
-### Starts a mock server (required)
-```
-yarn mock
-```
-
 # Demo
 [https://northernco.herokuapp.com/](https://northernco.herokuapp.com/)
 
