@@ -1,24 +1,26 @@
-# northern
+# Northernco Frontend Test
 
 ## Project setup
 ```
-npm install
+yarn
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+yarn serve
 ```
 
-### Compiles and minifies for production
+### Starts a mock server (required)
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+yarn mock
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Demo
+
+
+# Technologies Used
+
+- Vue.js for a quick environment setup with a clean component structure
+- TailwindCSS for rapid style prototyping
+- Axios for our HTTP requests
+- Express for our mock backend API
