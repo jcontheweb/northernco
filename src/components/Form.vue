@@ -1,12 +1,12 @@
 <template>
   <form @submit.prevent>
     <p
-      class="text-white text-xl"
+      class="text-white md:text-xl"
     >Prepare for your career with a Project Management, Web-Development, Graphic design, or Digital Marketing Internship at Northern.</p>
 
-    <div class="flex justify-between items-end space-x-5 mt-16">
+    <div class="md:flex justify-between items-end md:space-x-5 mt-10 md:mt-16">
       <FormInput v-model="form.email" :error="errors.email" @input="errors.email = null"></FormInput>
-      <FormSelect v-model="form.interest" :error="errors.interest" @input="errors.interest = null">
+      <FormSelect class="mt-4 md:mt-0" v-model="form.interest" :error="errors.interest" @input="errors.interest = null">
         <option disabled selected>Your interests</option>
         <option v-for="(interest, index) in interests" :key="index" :value="interest">{{ interest }}</option>
       </FormSelect>
@@ -16,7 +16,7 @@
       @click="submit"
       :disabled="loading"
       :class="{'cursor-not-allowed' : loading}"
-      class="focus:shadow-outline focus:outline-none text-xl bg-brand-red text-white py-4 w-full mt-8 rounded-md font-bold"
+      class="focus:shadow-outline focus:outline-none md:text-xl bg-brand-red text-white py-4 w-full mt-6 md:mt-8 rounded font-bold"
     >{{ loading ? 'Submitting...' : 'Sign Up Now' }}</button>
   </form>
 </template>
